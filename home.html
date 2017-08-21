@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<link rel="stylesheet" type="text/css" href="../css/receiver.css">
+    <style type="text/css">
+    body {
+        overflow: hidden;
+    }
+
+    div {
+        height: 720PX;
+        width: 1280PX;
+        text-align: center;
+        border: 0px solid silver;
+        display: table-cell;
+        vertical-align: middle;
+        color: #FFFFFF;
+        background-color: #000000;
+        font-weight: bold;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 40px;
+    }
+    </style>
 </head>
+
 <body>
-	<h1 id="user">TEST H1 PLZ IGNORE</h1>
+    <div>
+        <h1 id="user">TEST H1 PLZ IGNORE</h1>
+    </div>
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
 <script>
-	window.onload = function() {
-		cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
+window.onload = function() {
+    cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
 
-		window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
-		console.log("Starting receiver manager");
+    window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
+    console.log("Starting receiver manager");
 
-		castReceiverManager.onSenderConnected = function(event) {
-			console.log("Sender connected: " + event.data);
-			$("#user")[0].textContent = event.userAgent;
-		};
+    castReceiverManager.onSenderConnected = function(event) {
+        console.log("Sender connected: " + event.data);
+        $("#user")[0].textContent = event.userAgent;
+    };
 
-		castReceiverManager.onsenderDisconnected = function(event) {
-			console.log("Sender disconnected: " + event.data);
-		};
+    castReceiverManager.onsenderDisconnected = function(event) {
+        console.log("Sender disconnected: " + event.data);
+    };
 
-        window.castReceiverManager.start({statusText: 'Application is starting'});
-        console.log('Receiver Manager started');
-	};
+    window.castReceiverManager.start({ statusText: 'Application is starting' });
+    console.log('Receiver Manager started');
+};
 </script>
+
 </html>
