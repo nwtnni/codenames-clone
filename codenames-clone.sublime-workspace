@@ -15,6 +15,27 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "",
+			"file": "sender/index.html",
+			"file_size": 0,
+			"file_write_time": 131475447470743885,
+			"settings":
+			{
+				"buffer_size": 0,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "receiver/index.html",
+			"settings":
+			{
+				"buffer_size": 231,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -432,10 +453,14 @@
 	},
 	"expanded_folders":
 	[
-		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone"
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/receiver",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/sender",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/vendor"
 	],
 	"file_history":
 	[
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/receiver.html",
 		"/home/nwtnni/Stuff/facebook/html/friends.htm",
 		"/home/nwtnni/Stuff/facebook/html/messages.htm",
 		"/home/nwtnni/Stuff/facebook/chats/test.html",
@@ -562,8 +587,7 @@
 		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/views/static_pages/about.html.erb",
 		"/home/nni/.config/sublime-text-3/Packages/User/HTML (Rails).sublime-settings",
 		"/home/nni/.config/sublime-text-3/Packages/User/HTML.sublime-settings",
-		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/views/static_pages/home.html.erb",
-		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/views/users/show.html.erb"
+		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/views/static_pages/home.html.erb"
 	],
 	"find":
 	{
@@ -581,6 +605,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\t<",
 			"thread",
 			"\n#",
 			"Kathy Lin",
@@ -631,8 +656,67 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "sender/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "receiver/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								231,
+								231
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1133,7 +1217,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 273.0,
+	"side_bar_width": 196.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

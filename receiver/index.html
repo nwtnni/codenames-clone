@@ -2,11 +2,30 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="../css/receiver.css">
+	<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 </head>
 <body>
-
+	<h1 id="user">TEST H1 PLZ IGNORE</h1>
 </body>
-<script src="../"></script>
+<script src="../vendor/jquery-3.2.1.slim.min.js"></script>
+<script src="https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
 <script>
+	window.onload = function() {
+		window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
+		console.log("Starting receiver manager");
+
+		castReceiverManager.onSenderConnected = function(event) {
+			console.log("Sender connected: " + event.data);
+			$("#user")[0].textContent = event.userAgent;
+		};
+
+		castReceiverManager.onsenderDisconnected = function(event) {
+			console.log("Sender disconnected: " + event.data);
+			if (window.castReceiverManager.getSenders().length == 0) {
+				window.close();
+			}
+		};
+
+	};
 </script>
 </html>
