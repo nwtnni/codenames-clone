@@ -14,7 +14,7 @@
 <script>
 	window.onload = function() {
 		cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
-		
+
 		window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
 		console.log("Starting receiver manager");
 
@@ -25,9 +25,6 @@
 
 		castReceiverManager.onsenderDisconnected = function(event) {
 			console.log("Sender disconnected: " + event.data);
-			if (window.castReceiverManager.getSenders().length == 0) {
-				window.close();
-			}
 		};
 
         window.castReceiverManager.start({statusText: 'Application is starting'});
