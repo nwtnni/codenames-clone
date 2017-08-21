@@ -5,7 +5,7 @@
   	src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   	integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
   	crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
 </head>
 <body>
 
@@ -34,18 +34,18 @@
 
 		function receiverListener(e) {
 			if (e === 'available') {
-				$("debug")[0].textContent = "Receiver found!";
+				$("#debug")[0].textContent = "Receiver found!";
 			} else {
-				$("debug")[0].textContent = "No receivers.";
+				$("#debug")[0].textContent = "No receivers.";
 			}
 		}
 
 		function onInitSuccess() {
-			$("debug")[0].textContent = "Success!";
+			$("#debug")[0].textContent = "Success!";
 		}
 
 		function onError(message) {
-			$("debug")[0].textContent = "Error: " + message;
+			$("#debug")[0].textContent = "Error: " + message;
 		}
 
 	</script>

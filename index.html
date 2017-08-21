@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/receiver.css">
+</head>
+<body>
+	<h1 id="user">TEST H1 PLZ IGNORE</h1>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
+<script>
+	window.onload = function() {
+		cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
+		window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
+		console.log("Starting receiver manager");
+
+		castReceiverManager.onSenderConnected = function(event) {
+			console.log("Sender connected: " + event.data);
+			$("#user")[0].textContent = event.userAgent;
+		};
+
+		castReceiverManager.onsenderDisconnected = function(event) {
+			console.log("Sender disconnected: " + event.data);
+			if (window.castReceiverManager.getSenders().length == 0) {
+				window.close();
+			}
+		};
+
+	};
+</script>
+</html>
