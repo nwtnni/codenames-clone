@@ -25,6 +25,7 @@
 		function initializeCastApi() {
 			var request = new chrome.cast.SessionRequest(appID);
 			var apiConfig = new chrome.cast.ApiConfig(request, sessionListener, receiverListener);
+			chrome.cast.initialize(apiConfig, onInitSuccess, onError);
 		}
 
 		function sessionListener(e) {
@@ -37,6 +38,14 @@
 			} else {
 				$("debug")[0].textContent = "No receivers.";
 			}
+		}
+
+		function onInitSuccess() {
+			$("debug")[0].textContent = "Success!";
+		}
+
+		function onError(message) {
+			$("debug")[0].textContent = "Error: " + message;
 		}
 
 	</script>
