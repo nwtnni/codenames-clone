@@ -13,6 +13,8 @@
 <script src="https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
 <script>
 	window.onload = function() {
+		cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
+		
 		window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
 		console.log("Starting receiver manager");
 
@@ -28,6 +30,8 @@
 			}
 		};
 
+        window.castReceiverManager.start({statusText: 'Application is starting'});
+        console.log('Receiver Manager started');
 	};
 </script>
 </html>
