@@ -16,22 +16,19 @@
 	"buffers":
 	[
 		{
-			"contents": "",
-			"file": "sender/index.html",
-			"file_size": 0,
-			"file_write_time": 131475447470743885,
+			"file": "home.html",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1507,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "receiver/index.html",
+			"file": "sender/index.html",
 			"settings":
 			{
-				"buffer_size": 231,
+				"buffer_size": 1295,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -77,9 +74,13 @@
 	"command_palette":
 	{
 		"height": 354.0,
-		"last_filter": "pains",
+		"last_filter": "pretti",
 		"selected_items":
 		[
+			[
+				"pretti",
+				"HTMLPrettify"
+			],
 			[
 				"pains",
 				"Package Control: Install Package"
@@ -454,12 +455,13 @@
 	"expanded_folders":
 	[
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone",
-		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/receiver",
-		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/sender",
-		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/vendor"
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/sender"
 	],
 	"file_history":
 	[
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/index.html",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/receiver/index.html",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/sender/index.html",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/receiver.html",
 		"/home/nwtnni/Stuff/facebook/html/friends.htm",
 		"/home/nwtnni/Stuff/facebook/html/messages.htm",
@@ -584,10 +586,7 @@
 		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/views/home/index.html.erb",
 		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/controllers/static_pages_controller.rb",
 		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/views/layouts/application.html.erb",
-		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/views/static_pages/about.html.erb",
-		"/home/nni/.config/sublime-text-3/Packages/User/HTML (Rails).sublime-settings",
-		"/home/nni/.config/sublime-text-3/Packages/User/HTML.sublime-settings",
-		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/views/static_pages/home.html.erb"
+		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/views/static_pages/about.html.erb"
 	],
 	"find":
 	{
@@ -605,6 +604,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"></",
 			"\t<",
 			"thread",
 			"\n#",
@@ -656,65 +656,69 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "sender/index.html",
+					"file": "home.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1507,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								404,
+								404
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "receiver/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 231,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								231,
-								231
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sender/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1218,
+								1218
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

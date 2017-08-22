@@ -1,0 +1,79 @@
+html {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #FFFFFF;
+	font-family: 'Saira', sans-serif;
+	font-weight: 600;
+	text-align: center;
+	color: #212121;
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.row {
+	margin-bottom: 30px;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.card {
+	display: inline-block;
+	margin-left: 2.5%;
+	width: 17.5%;
+	font-size: 30px;
+	line-height: 120px;
+	text-transform: uppercase;
+	border: 2px solid #BDBDBD;
+	border-radius: 10px;
+}
+
+.card:first-child {
+	margin-left: 0;
+}
+
+.team-indicator {
+	margin: 0 auto;
+	width: 50%;
+	font-size: 30px;
+	line-height: 50px;
+	border: 2px solid #BDBDBD;
+	border-radius: 10px;
+}
+
+.blue-team {
+	background-color: #2196F3;
+}
+
+.red-team {
+	background-color: #FF5252;
+}
+
+.civilian {
+	background-color: #757575;
+}
+
+.assassin {
+	background-color: #212121;
+	color: #FFFFFF;
+}
