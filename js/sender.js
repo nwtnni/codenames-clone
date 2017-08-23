@@ -27,20 +27,19 @@ $(function() {
         console.log(message);
     }
 
-    function resetBoard() {
-    	var words = loadWords();
-    	$("card").each(function(index) {
+   	function resetBoard() {
+        fetch("../words.txt").then(function(response) {
+            response.text().then(function(text) {
+                words = shuffle(text.split("\n"));
+                display(words);
+            });
+        });   		
+   	}
+
+   	function display(words) {
+   		$("card").each(function(index) {
     		this.textContent = words[index];
     	});
-    }
-
-   	function loadWords() {
-        fetch("../words.txt").then(function(response) {
-            var words = response.text().then(function(text) {
-                return shuffle(text.split("\n"));
-            });
-            return words.splice(0, 25);
-        });   		
    	}
 
     function shuffle(arr) {
