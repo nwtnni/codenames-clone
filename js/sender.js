@@ -31,6 +31,7 @@ $(function() {
         fetch("../words.txt").then(function(response) {
             response.text().then(function(text) {
                 words = shuffle(text.split("\n"));
+                console.log(words);
                 display(words);
             });
         });   		
@@ -38,7 +39,8 @@ $(function() {
 
    	function display(words) {
    		$("card").each(function(index) {
-    		this.textContent = words[index];
+   			console.log("Word: " + words[index] + " at index " + index);
+    		$(this).textContent = words[index];
     	});
    	}
 
