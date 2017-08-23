@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"initialize",
+				"initializeBoard"
+			],
+			[
+				"initi",
+				"initializeBoard〔function〕"
+			],
+			[
 				"thread",
 				"thread"
 			],
@@ -16,19 +24,39 @@
 	"buffers":
 	[
 		{
-			"file": "home.html",
+			"contents": "$(function() {\n    cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);\n\n    window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();\n    window.messageBus = window.castReceiverManager.getCastMessageBus(\"codenames-clone\");\n\n    function initialize(words) {\n\n    }\n\n    function\n\n    window.messageBus.onMessage = function(message) {\n        \n    };\n\n\n\n    window.castReceiverManager.start({ statusText: 'Application is starting' });\n});",
+			"file": "js/receiver.js",
+			"file_size": 605,
+			"file_write_time": 131478354356787373,
 			"settings":
 			{
-				"buffer_size": 1507,
+				"buffer_size": 473,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/sender.js",
+			"settings":
+			{
+				"buffer_size": 1456,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sender/index.html",
+			"file": "sender.html",
 			"settings":
 			{
-				"buffer_size": 1295,
+				"buffer_size": 1472,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "theme.css",
+			"settings":
+			{
+				"buffer_size": 995,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -455,14 +483,19 @@
 	"expanded_folders":
 	[
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone",
-		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/sender"
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/js"
 	],
 	"file_history":
 	[
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/theme.css",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/sender.html",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/receiver.html",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/js/receiver.js",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/js/sender.js",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/index.php",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/index.html",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/receiver/index.html",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/sender/index.html",
-		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/receiver.html",
 		"/home/nwtnni/Stuff/facebook/html/friends.htm",
 		"/home/nwtnni/Stuff/facebook/html/messages.htm",
 		"/home/nwtnni/Stuff/facebook/chats/test.html",
@@ -581,12 +614,7 @@
 		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/controllers/notes_controller.rb",
 		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/views/notes/show.html.erb",
 		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/views/notes/show.json.jbuilder",
-		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/assets/stylesheets/application.css",
-		"/home/nni/Dropbox/School/CS/Projects/todo-list/Gemfile",
-		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/views/home/index.html.erb",
-		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/controllers/static_pages_controller.rb",
-		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/views/layouts/application.html.erb",
-		"/home/nni/Dropbox/School/CS/Projects/rails-tutorial/app/views/static_pages/about.html.erb"
+		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/assets/stylesheets/application.css"
 	],
 	"find":
 	{
@@ -604,6 +632,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"c",
+			"center",
 			"></",
 			"\t<",
 			"thread",
@@ -656,34 +686,66 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "home.html",
+					"file": "js/receiver.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1507,
+						"buffer_size": 473,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								404,
-								404
+								324,
+								324
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
 							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/sender.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								244,
+								244
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 464.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -691,34 +753,63 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "sender/index.html",
+					"buffer": 2,
+					"file": "sender.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1295,
+						"buffer_size": 1472,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1218,
-								1218
+								545,
+								545
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 15.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "theme.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 995,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								505,
+								505
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 142.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

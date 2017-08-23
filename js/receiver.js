@@ -2,16 +2,17 @@ $(function() {
     cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
 
     window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
-    console.log("Starting receiver manager");
+    window.messageBus = window.castReceiverManager.getCastMessageBus("codenames-clone");
 
-    castReceiverManager.onSenderConnected = function(event) {
-        console.log("Sender connected: " + event.data);
+    function initialize(words) {
+
+    }
+
+    window.messageBus.onMessage = function(message) {
+        
     };
 
-    castReceiverManager.onsenderDisconnected = function(event) {
-        console.log("Sender disconnected: " + event.data);
-    };
+
 
     window.castReceiverManager.start({ statusText: 'Application is starting' });
-    console.log('Receiver Manager started');
 });
