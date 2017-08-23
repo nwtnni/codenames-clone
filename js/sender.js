@@ -3,6 +3,7 @@ $(function() {
     var resetNamespace = "urn:x-cast:codenames.reset";
     var updateNamespace = "urn:x-cast:codenames.update";
     var session = null;
+    var words = null;
 
     if (!chrome.cast || !chrome.cast.isAvailable) {
         setTimeout(initializeCastApi, 1000);
@@ -30,17 +31,15 @@ $(function() {
    	function resetBoard() {
         fetch("../words.txt").then(function(response) {
             response.text().then(function(text) {
-                words = shuffle(text.split("\n"));
-                console.log(words);
+                words = shuffle(text.split("\n")).splice(200, 25);
                 display(words);
             });
         });   		
    	}
 
    	function display(words) {
-   		$("card").each(function(index) {
-   			console.log("Word: " + words[index] + " at index " + index);
-    		$(this).textContent = words[index];
+   		$(".card").each(function(index) {
+    		this.textContent = words[index];
     	});
    	}
 
