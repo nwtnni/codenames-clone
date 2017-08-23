@@ -58,10 +58,14 @@ $(function() {
    	function resetWords() {
         fetch("../words.txt").then(function(response) {
             response.text().then(function(text) {
-                words = _.shuffle(text.split("\n")).splice(200, 25);
+        		parseWords(text);
         		$(".card").text("");
             });
         });   		
+   	}
+
+   	function parseWords(text) {
+    	words = _.shuffle(text.split("\n")).splice(200, 25);
    	}
 
    	function displayCurrent() {
