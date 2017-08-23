@@ -28,7 +28,7 @@ $(function() {
 	}
 
 	function resetBoard() {
-		fetch("https://codenames-clone.herokuapp.com/words.txt").then(function(response) {
+		fetch("../words.txt").then(function(response) {
 			console.log(response.text());
 		});
 	}
