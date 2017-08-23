@@ -24,13 +24,10 @@
 	"buffers":
 	[
 		{
-			"contents": "$(function() {\n    cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);\n\n    window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();\n    window.messageBus = window.castReceiverManager.getCastMessageBus(\"codenames-clone\");\n\n    function initialize(words) {\n\n    }\n\n    function\n\n    window.messageBus.onMessage = function(message) {\n        \n    };\n\n\n\n    window.castReceiverManager.start({ statusText: 'Application is starting' });\n});",
 			"file": "js/receiver.js",
-			"file_size": 605,
-			"file_write_time": 131478354356787373,
 			"settings":
 			{
-				"buffer_size": 473,
+				"buffer_size": 459,
 				"line_ending": "Unix"
 			}
 		},
@@ -38,17 +35,7 @@
 			"file": "js/sender.js",
 			"settings":
 			{
-				"buffer_size": 1456,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sender.html",
-			"settings":
-			{
-				"buffer_size": 1472,
-				"encoding": "UTF-8",
+				"buffer_size": 1482,
 				"line_ending": "Unix"
 			}
 		},
@@ -101,10 +88,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 354.0,
-		"last_filter": "pretti",
+		"height": 313.0,
+		"last_filter": "prettif",
 		"selected_items":
 		[
+			[
+				"prettif",
+				"HTMLPrettify"
+			],
 			[
 				"pretti",
 				"HTMLPrettify"
@@ -487,11 +478,13 @@
 	],
 	"file_history":
 	[
-		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/theme.css",
-		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/sender.html",
-		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/receiver.html",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/js/receiver.js",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/js/sender.js",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/theme.css",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/js/parse.js",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/sender.html",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/js/temp",
+		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/receiver.html",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/index.php",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/index.html",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/receiver/index.html",
@@ -612,9 +605,7 @@
 		"/home/nni/Dropbox/School/CS/Projects/todo-list/test/controllers/notes_controller_test.rb",
 		"/home/nni/Dropbox/School/CS/Projects/todo-list/test/system/notes_test.rb",
 		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/controllers/notes_controller.rb",
-		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/views/notes/show.html.erb",
-		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/views/notes/show.json.jbuilder",
-		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/assets/stylesheets/application.css"
+		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/views/notes/show.html.erb"
 	],
 	"find":
 	{
@@ -686,7 +677,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -695,24 +686,21 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 473,
+						"buffer_size": 459,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								324,
-								324
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
 							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -727,63 +715,33 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1456,
+						"buffer_size": 1482,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								244,
-								244
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
 							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 464.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sender.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1472,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								545,
-								545
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 15.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "theme.css",
 					"semi_transient": false,
 					"settings":
@@ -795,8 +753,8 @@
 						"selection":
 						[
 							[
-								505,
-								505
+								0,
+								0
 							]
 						],
 						"settings":
@@ -806,10 +764,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 142.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
