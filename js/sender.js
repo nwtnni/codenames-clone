@@ -35,60 +35,60 @@ $(function() {
     }
 
     function initializeBoard() {
-    	resetWords();
-    	resetTeams();
-    	selectedCards = [];
+        resetWords();
+        resetTeams();
+        selectedCards = [];
 
-    	displayCurrent();
-    	displayWords();
-    	displayTeams();
+        displayCurrent();
+        displayTeams();
     }
 
     function resetTeams() {
-    	$(".card").removeClass("blue-team red-team assassin");
-    	var seed = _.shuffle(_.range(25));
-    	currentBlue = (Math.random() > 0.5);
+        $(".card").removeClass("blue-team red-team assassin");
+        var seed = _.shuffle(_.range(25));
+        currentBlue = (Math.random() > 0.5);
 
-    	blueTeam = seed.splice(0, 7);
-    	redTeam = seed.splice(7, 7);
-    	assassin = seed.splice(14, 1);
-    	currentBlue ? blueTeam.push(seed[15]) : redTeam.push(seed[15]);
+        blueTeam = seed.splice(0, 7);
+        redTeam = seed.splice(7, 7);
+        assassin = seed.splice(14, 1);
+        currentBlue ? blueTeam.push(seed[15]) : redTeam.push(seed[15]);
     }
 
-   	function resetWords() {
+    function resetWords() {
         fetch("../words.txt").then(function(response) {
             response.text().then(function(text) {
-        		parseWords(text);
-        		$(".card").text("");
+                parseWords(text);
+                $(".card").text("");
+                displayWords();
             });
-        });   		
-   	}
+        });
+    }
 
-   	function parseWords(text) {
-    	words = _.shuffle(text.split("\n")).splice(200, 25);
-   	}
+    function parseWords(text) {
+        words = _.shuffle(text.split("\n")).splice(200, 25);
+    }
 
-   	function displayCurrent() {
-   		$(".team-indicator").removeClass().addClass(currentBlue ? "blue-team" : "red-team");
-   	}
+    function displayCurrent() {
+        $(".team-indicator").removeClass().addClass(currentBlue ? "blue-team" : "red-team");
+    }
 
-   	function displayTeams() {
-   		$(".card").addClass(function(index, currentClassName) {
-   			if (blueTeam.includes(index)) {
-   				return "blue-team";
-   			} else if (redTeam.includes(index)) {
-   				return "red-team";
-   			} else if (assassin == index) {
-   				return "assassin";
-   			} 
-   		});
-   	}
+    function displayTeams() {
+        $(".card").addClass(function(index, currentClassName) {
+            if (blueTeam.includes(index)) {
+                return "blue-team";
+            } else if (redTeam.includes(index)) {
+                return "red-team";
+            } else if (assassin == index) {
+                return "assassin";
+            }
+        });
+    }
 
-   	function displayWords() {
-   		$(".card").each(function(index) {
-    		this.textContent = words[index];
-    	});
-   	}
+    function displayWords() {
+        $(".card").each(function(index) {
+            this.textContent = words[index];
+        });
+    }
 
     initializeBoard();
 });
