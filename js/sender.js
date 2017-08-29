@@ -49,9 +49,9 @@ $(function() {
         currentBlue = (Math.random() > 0.5);
 
         blueTeam = seed.splice(0, 7);
-        redTeam = seed.splice(7, 7);
-        assassin = seed.splice(14, 1);
-        currentBlue ? blueTeam.push(seed[15]) : redTeam.push(seed[15]);
+        redTeam = seed.splice(0, 7);
+        assassin = seed.splice(0, 1);
+        currentBlue ? blueTeam.push(seed[0]) : redTeam.push(seed[0]);
     }
 
     function resetWords() {
