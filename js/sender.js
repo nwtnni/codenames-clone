@@ -61,6 +61,8 @@ $(function() {
       displayCurrent();
       displayTeams();
       displayWords();
+      updateReceiver();
+      console.log(JSON.stringify(board));
     }
 
     function parseWords(text) {
@@ -89,6 +91,10 @@ $(function() {
         $(".card").each(function(index) {
             this.textContent = board.words[index];
         });
+    }
+
+    function updateReceiver() {
+      session.sendMessage(namespace, JSON.stringify(board));
     }
 
     initialize();
