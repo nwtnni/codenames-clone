@@ -28,6 +28,9 @@ $(function() {
 
     function sessionListener(e) {
         session = e;
+        updateReceiver();
+        console.log(JSON.stringify(board));
+        console.log("Found a session!");
     }
 
     function onInitSuccess() {
@@ -61,8 +64,6 @@ $(function() {
       displayCurrent();
       displayTeams();
       displayWords();
-      updateReceiver();
-      console.log(JSON.stringify(board));
     }
 
     function parseWords(text) {
@@ -94,7 +95,9 @@ $(function() {
     }
 
     function updateReceiver() {
-      session.sendMessage(namespace, JSON.stringify(board));
+      session.sendMessage(namespace, JSON.stringify(board)).then(function(response) {
+        console.log("Successfully sent message.");
+      });
     }
 
     initialize();
