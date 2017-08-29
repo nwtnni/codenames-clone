@@ -78,7 +78,7 @@ $(function() {
                 return "blue-team";
             } else if (redTeam.includes(index)) {
                 return "red-team";
-            } else if (assassin == index) {
+            } else if (assassin.includes(index)) {
                 return "assassin";
             }
         });
