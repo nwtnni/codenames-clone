@@ -69,7 +69,7 @@ $(function() {
     }
 
     function displayCurrent() {
-        $(".team-indicator").removeClass().addClass(board.currentBlue ? "blue-team" : "red-team");
+        $(".team-indicator").removeClass("blue-team red-team").addClass(board.currentBlue ? "blue-team" : "red-team");
         $(".team-indicator").text(board.currentBlue? "Blue Team" : "Red Team");
     }
 
