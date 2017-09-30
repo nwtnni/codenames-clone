@@ -13,7 +13,12 @@ $(function() {
         this.blue = seed.splice(0, 7);
         this.red = seed.splice(0, 7);
         this.assassin = seed.splice(0, 1);
-        this.currentBlue ? this.blue.push(seed[0]) : this.red.push(seed[0]);
+
+        if (this.currentBlue) {
+            this.blue.push(seed[0]);
+        } else {
+            this.red.push(seed[0]);
+        }
     }
 
     if (!chrome.cast || !chrome.cast.isAvailable) {
@@ -98,6 +103,11 @@ $(function() {
       session.sendMessage(namespace, JSON.stringify(board)).then(function(response) {
         console.log("Successfully sent message.");
       });
+    }
+
+    function toggleCurrent() {
+        board.currentBlue = !board.currentBlue;
+        displayCurrent();
     }
 
     initialize();

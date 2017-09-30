@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"displ",
+				"displayWords"
+			],
+			[
 				"dis",
 				"displayTeams"
 			],
@@ -32,6 +36,24 @@
 			"settings":
 			{
 				"buffer_size": 1466,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/sender.js",
+			"settings":
+			{
+				"buffer_size": 2878,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/receiver.js",
+			"settings":
+			{
+				"buffer_size": 311,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -76,10 +98,26 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 313.0,
-		"last_filter": "prettif",
+		"height": 354.0,
+		"last_filter": "mapr",
 		"selected_items":
 		[
+			[
+				"mapr",
+				"MarkdownLivePreview: Edit Current File"
+			],
+			[
+				"pains",
+				"Package Control: Install Package"
+			],
+			[
+				"markd",
+				"Build With: Markdown"
+			],
+			[
+				"prettify",
+				"HTMLPrettify"
+			],
 			[
 				"prettif",
 				"HTMLPrettify"
@@ -87,10 +125,6 @@
 			[
 				"pretti",
 				"HTMLPrettify"
-			],
-			[
-				"pains",
-				"Package Control: Install Package"
 			],
 			[
 				"packrepa",
@@ -107,10 +141,6 @@
 			[
 				"painst",
 				"Package Control: Install Package"
-			],
-			[
-				"mapr",
-				"Markdown Preview: Preview in Browser"
 			],
 			[
 				":w",
@@ -437,7 +467,7 @@
 				"Package Control: List Packages"
 			]
 		],
-		"width": 575.0
+		"width": 657.0
 	},
 	"console":
 	{
@@ -461,11 +491,11 @@
 	},
 	"expanded_folders":
 	[
-		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone",
-		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/js"
 	],
 	"file_history":
 	[
+		"/home/nwtnni/Dropbox/School/cs/classes/3110/assignments/a1/hunt.md",
+		"/home/nwtnni/Dropbox/School/untitled",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/sender.html",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/js/receiver.js",
 		"/home/nwtnni/Dropbox/School/cs/projects/codenames-clone/theme.css",
@@ -591,13 +621,11 @@
 		"/home/nni/Dropbox/School/CS/Projects/todo-list/config/routes.rb",
 		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/controllers/application_controller.rb",
 		"/home/nni/Dropbox/School/CS/Projects/todo-list/test/controllers/notes_controller_test.rb",
-		"/home/nni/Dropbox/School/CS/Projects/todo-list/test/system/notes_test.rb",
-		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/controllers/notes_controller.rb",
-		"/home/nni/Dropbox/School/CS/Projects/todo-list/app/views/notes/show.html.erb"
+		"/home/nni/Dropbox/School/CS/Projects/todo-list/test/system/notes_test.rb"
 	],
 	"find":
 	{
-		"height": 70.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -611,6 +639,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"();\n",
 			"c",
 			"center",
 			"></",
@@ -665,7 +694,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -696,6 +725,68 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/sender.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2878,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1758,
+								1758
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/receiver.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								284,
+								284
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
 					"type": "text"
 				}
@@ -704,7 +795,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 70.0
+		"height": 24.0
 	},
 	"input":
 	{
@@ -753,7 +844,7 @@
 	"project": "codenames-clone.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
