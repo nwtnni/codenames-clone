@@ -49,10 +49,6 @@ div {
 	border-style: solid;
 }
 
-.selected {
-	border-color: #000000;
-}
-
 .card:first-child {
 	margin-left: 0;
 }
