@@ -78,23 +78,10 @@ function displayWords() {
 }
 
 function sendUpdate() {
-    if (session != null) {
-        console.log("Session is not null!")
-        session.sendMessage(namespace, board, onSuccess.bind(this, 'Message sent: ' + message), onError);
+    if (session == null) {
+        session = cast.framework.CastContext.getInstance().getCurrentSession();
     }
-    else {
-        chrome.cast.requestSession(function(e) {
-            session = e;
-            console.log("Session was null, but is now " + session.sessionId);
-            session.sendMessage(namespace, board, onSuccess.bind(this, 'Message sent: ' + message), onError);
-        }, onError);
-    }
-}
-
-function updateReceiver() {
-  session.sendMessage(namespace, JSON.stringify(board)).then(function(response) {
-    console.log("Successfully sent message.");
-  });
+    session.sendMessage(namespace, board);
 }
 
 function toggleCurrent() {
@@ -103,41 +90,18 @@ function toggleCurrent() {
 }
 
 $(document).ready(function() {
-    if (!chrome.cast || !chrome.cast.isAvailable) {
-        setTimeout(initializeCastApi, 1000);
-    }
+    window['__onGCastApiAvailable'] = function(isAvailable) {
+        if (isAvailable) {
+            initializeCastApi();
+        }
+    };
 
     function initializeCastApi() {
-        var request = new chrome.cast.SessionRequest(appID);
-        var apiConfig = new chrome.cast.ApiConfig(request, sessionListener, function() {});
-        chrome.cast.initialize(apiConfig, onInitSuccess, onError);
+        cast.framework.CastContext.getInstance().setOptions({
+            receiverApplicationId: appID,
+            autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
+        });
     }
-
-    function sessionListener(e) {
-        session = e;
-        session.addUpdateListener(sessionUpdateListener);
-        updateReceiver();
-        console.log(JSON.stringify(board));
-        console.log("Found a session!");
-    }
-
-    function sessionUpdateListener(isAlive) {
-        var message = isAlive ? 'Session updated: ' : 'Session removed: ';
-        console.log(message + session.sessionId);
-        session = isAlive ? session : null;
-    }
-
-    function onInitSuccess() {
-        console.log("Successfully initialized");
-    }
-
-    function onError(message) {
-        console.log('Error: ' + JSON.stringify(message));
-    }
-
-    function onSuccess(message) {
-        console.log('Success: ' + JSON.stringify(message))
-    ;}
 
     function initialize() {
       clearBoard();
