@@ -120,11 +120,13 @@ function displayWords() {
 
 function sendUpdate() {
     if (session != null) {
+        console.log("Session is not null!")
         session.sendMessage(namespace, board, onSuccess.bind(this, 'Message sent: ' + message), onError);
     }
     else {
         chrome.cast.requestSession(function(e) {
             session = e;
+            console.log("Session was null, but is now " + session.sessionId);
             session.sendMessage(namespace, board, onSuccess.bind(this, 'Message sent: ' + message), onError);
         }, onError);
     }
