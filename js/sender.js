@@ -32,9 +32,16 @@ function initializeCastApi() {
 
 function sessionListener(e) {
     session = e;
+    session.addUpdateListener(sessionUpdateListener);
     updateReceiver();
     console.log(JSON.stringify(board));
     console.log("Found a session!");
+}
+
+function sessionUpdateListener(isAlive) {
+    var message = isAlive ? 'Session updated: ' : 'Session removed: ';
+    console.log(message + session.sessionId);
+    session = isAlive ? session : null;
 }
 
 function onInitSuccess() {
@@ -42,8 +49,12 @@ function onInitSuccess() {
 }
 
 function onError(message) {
-    console.log(message);
+    console.log('Error: ' + JSON.stringify(message));
 }
+
+function onSuccess(message) {
+    console.log('Success: ' + JSON.stringify(message))
+;}
 
 function initialize() {
   clearBoard();
@@ -94,7 +105,14 @@ function displayTeams() {
 
 function displayWords() {
     $(".card").each(function(index) {
-        this.textContent = board.words[index];
+        var card = this;
+        card.textContent = board.words[index];
+        card.onclick = function() {
+            if (!selectedCards.includes(index)) {
+                selectedCards.push(index);
+                card.addClass("selected");
+            }
+        };
     });
 }
 
