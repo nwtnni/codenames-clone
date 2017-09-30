@@ -112,7 +112,7 @@ function displayWords() {
         card.onclick = function() {
             if (!board.selectedCards.includes(index)) {
                 board.selectedCards.push(index);
-                card.addClass("selected");
+                $(card).addClass("selected");
             }
         };
     });
