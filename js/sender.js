@@ -92,6 +92,7 @@ function toggleCurrent() {
 $(document).ready(function() {
     window['__onGCastApiAvailable'] = function(isAvailable) {
         if (isAvailable) {
+            console.log("Is available. Initializing...");
             initializeCastApi();
         }
     };
@@ -101,6 +102,7 @@ $(document).ready(function() {
             receiverApplicationId: appID,
             autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
         });
+        console.log("Session: " + cast.framework.CastContext.getInstance().getCurrentSession().sessionId);
     }
 
     function initialize() {
