@@ -99,6 +99,8 @@ function displayTeams() {
             return "red-team";
         } else if (board.assassin.includes(index)) {
             return "assassin";
+        } else {
+            return "civilian";
         }
     });
 }
@@ -108,8 +110,8 @@ function displayWords() {
         var card = this;
         card.textContent = board.words[index];
         card.onclick = function() {
-            if (!selectedCards.includes(index)) {
-                selectedCards.push(index);
+            if (!board.selectedCards.includes(index)) {
+                board.selectedCards.push(index);
                 card.addClass("selected");
             }
         };
