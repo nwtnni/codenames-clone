@@ -45,6 +45,12 @@ div {
 	line-height: 120px;
 	text-transform: uppercase;
 	border-radius: 10px;
+	border-width: 4px;
+	border-style: solid;
+}
+
+.selected {
+	border-color: #000000;
 }
 
 .card:first-child {
@@ -61,19 +67,19 @@ div {
 }
 
 .blue-team.card {
-	border: 2px solid #2196F3;	
+	border-color: #2196F3;	
 }
 
 .red-team.card {
-	border: 2px solid #FF5252;
+	border-color: #FF5252;
 }
 
 .assassin.card {
-	border: 2px solid #000000;
+	border-color: #000000;
 }
 
 .civilian.card {
-	border: 2px solid #d3caa0;
+	border-color: #d3caa0;
 }
 
 .blue-team.selected {

@@ -118,6 +118,18 @@ function displayWords() {
     });
 }
 
+function sendUpdate() {
+    if (session != null) {
+        session.sendMessage(namespace, board, onSuccess.bind(this, 'Message sent: ' + message), onError);
+    }
+    else {
+        chrome.cast.requestSession(function(e) {
+            session = e;
+            session.sendMessage(namespace, board, onSuccess.bind(this, 'Message sent: ' + message), onError);
+        }, onError);
+    }
+}
+
 function updateReceiver() {
   session.sendMessage(namespace, JSON.stringify(board)).then(function(response) {
     console.log("Successfully sent message.");
